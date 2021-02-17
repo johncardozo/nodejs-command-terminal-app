@@ -1,14 +1,14 @@
 {
   "bandas": [
-    { "name": "The Beatles", "year": "1960" },
-    { "name": "Led Zeppelin", "year": "1968" },
-    { "name": "Queen", "year": "1970" },
-    { "name": "Pink Floyd", "year": "1965" },
-    { "name": "The Rolling Stones", "year": "1962" },
-    { "name": "AC/DC", "year": "1973" },
-    { "name": "Eagles", "year": "1971" },
-    { "name": "Metallica", "year": "1981" },
-    { "name": "Guns N' Roses", "year": "1985" },
-    { "name": "Aerosmith", "year": "1969" }
+    { "name": "The Beatles", "year": 1960 },
+    { "name": "Led Zeppelin", "year": 1968 },
+    { "name": "Queen", "year": 1970 },
+    { "name": "Pink Floyd", "year": 1965 },
+    { "name": "The Rolling Stones", "year": 1962 },
+    { "name": "AC/DC", "year": 1973 },
+    { "name": "Eagles", "year": 1971 },
+    { "name": "Metallica", "year": 1981 },
+    { "name": "Guns N' Roses", "year": 1985 },
+    { "name": "Aerosmith", "year": 1969 }
   ]
 }

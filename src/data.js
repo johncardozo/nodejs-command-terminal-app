@@ -46,6 +46,8 @@ const editarBanda = async (datos, nombreAnteriorBanda, nuevaBanda) => {
   const indice = datos.bandas.findIndex(
     (b) => b.name === nombreAnteriorBanda.banda
   );
+  // Convierte el año en un entero
+  nuevaBanda.year = parseInt(nuevaBanda.year);
   // Modifica el objeto
   datos.bandas[indice] = nuevaBanda;
   // Convierte los datos en string
