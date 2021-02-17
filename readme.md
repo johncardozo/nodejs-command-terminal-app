@@ -12,7 +12,7 @@ Los objetivos del programa son:
 ## Librerías
 
 - [chalk](https://www.npmjs.com/package/chalk) -- Da color a la Terminal
-- [clear](<[chalk](https://www.npmjs.com/package/chalk)>) -- Limpia la pantalla de la Terminal
+- [clear](https://www.npmjs.com/package/clear) -- Limpia la pantalla de la Terminal
 - [cli-table3](https://www.npmjs.com/package/cli-table3) -- Muestra tablas en la Terminal
 - [figlet](https://www.npmjs.com/package/figlet) -- Crea arte ASCII desde un texto
 - [inquirer](https://www.npmjs.com/package/inquirer) -- Crea interfaz interactiva en la Terminal
