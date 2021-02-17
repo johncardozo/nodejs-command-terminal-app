@@ -26,6 +26,9 @@ const cargarBandas = async () => {
 };
 
 const agregarBanda = async (datos, banda) => {
+  // Convierte el año en un entero
+  banda.year = parseInt(banda.year);
+
   // Agrega la banda al objeto de datos
   datos.bandas.push(banda);
 
