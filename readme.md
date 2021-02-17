@@ -33,16 +33,18 @@ npm install
 npm start
 ```
 
-Si se desea generar la documentación del programa se puede hacer ejecutando la instrucción:
+## Documentación
+
+Instale el paquete [Documentation](https://documentation.js.org/) de forma global ejecutando:
+
+```bash
+npm install -g documentation
+```
+
+Para generar la documentación del programa ejecute la instrucción:
 
 ```bash
 documentation build src/** -f html -o docs
 ```
 
 Esta instrucción genera la documentación de los archivos del folder `src` en formato HTML y los almacena en el folder `docs`
-
-Previamente se debe instalar [Documentation](https://documentation.js.org/) ejecutando:
-
-```bash
-npm install -g documentation
-```
