@@ -3,11 +3,18 @@ const data = require("./data");
 const input = require("./input");
 const output = require("./output");
 
+/**
+ * Función que permite hacer una pausa en el programa hasta que se oprima alguna tecla.
+ */
 const pausa = async () => {
   // Detiene la ejecución hasta oprimir una tecla
   await pressAnyKey("Presione cualquier tecla para continuar...");
 };
 
+/**
+ * Función que pide los datos de una nueva banda la usuario y guarda la banda en un archivo Json.
+ * @param {Object} datos Objeto de datos al cual se le agregará una banda
+ */
 const opcionAgregar = async (datos) => {
   // Pide los datos de la banda
   const banda = await input.pedirDatosBanda();
@@ -19,6 +26,10 @@ const opcionAgregar = async (datos) => {
   return datos;
 };
 
+/**
+ * Función que lista las bandas.
+ * @param {Object} datos Objeto de datos que tiene la lista de bandas
+ */
 const opcionListar = async (datos) => {
   // Muestra la lista de bandas
   await output.mostrarBandas(datos.bandas);
@@ -26,6 +37,11 @@ const opcionListar = async (datos) => {
   // Detiene la ejecución hasta oprimir una tecla
   await pausa();
 };
+
+/**
+ * Función que permite seleccionar la banda a editar, pide los nuevos datos de la banda, modifica la banda y guarda los datos en un archivo Json.
+ * @param {Object} datos Objeto de datos al cual se le editará una banda
+ */
 const opcionEditar = async (datos) => {
   // Muestra el menú de bandas
   const seleccionEditar = await input.seleccionarBanda(datos.bandas);
@@ -39,6 +55,11 @@ const opcionEditar = async (datos) => {
   // Retorna los datos
   return datos;
 };
+
+/**
+ * Función que permite seleccionar la banda a eliminar, confirma la eliminación, elimina la banda y guarda los datos en un archivo Json.
+ * @param {Object} datos Objeto de datos al cual se le eliminará una banda
+ */
 const opcionEliminar = async (datos) => {
   // Muestra el menú de bandas
   const seleccionEliminar = await input.seleccionarBanda(datos.bandas);
@@ -55,7 +76,11 @@ const opcionEliminar = async (datos) => {
   // Retorna los datos
   return datos;
 };
-const opcionSalir = async (datos) => {
+
+/**
+ * Función que muestra el mensaje de salida
+ */
+const opcionSalir = async () => {
   // Muestra el mensaje de salida
   await output.mostrarMensajeSalida();
 };

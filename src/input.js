@@ -8,6 +8,9 @@ const ELIMINAR = 4;
 const SALIR = 5;
 
 module.exports = {
+  /**
+   * Función que contiene las opciones del menú principal
+   */
   pedirOpcion: () => {
     const opciones = [
       {
@@ -26,6 +29,9 @@ module.exports = {
     ];
     return inquirer.prompt(opciones);
   },
+  /**
+   * Función que pide al usuario los datos de una banda
+   */
   pedirDatosBanda: () => {
     const datosBanda = [
       {
@@ -56,6 +62,10 @@ module.exports = {
     ];
     return inquirer.prompt(datosBanda);
   },
+  /**
+   * Función que recibe la lista de bandas y muestra un menú para poder seleccionar una banda.
+   * @param {Array} bandas lista de bandas
+   */
   seleccionarBanda: (bandas) => {
     // Transforma la lista de objetos en una lista de strings
     const opciones = bandas.map(function (item) {
@@ -71,6 +81,9 @@ module.exports = {
     ];
     return inquirer.prompt(opcionesBandas);
   },
+  /**
+   * Función que confirmar si se desea eliminar una banda.
+   */
   confirmarEliminarBanda: () => {
     const opciones = [
       {

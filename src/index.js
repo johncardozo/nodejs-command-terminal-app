@@ -6,6 +6,9 @@ const output = require("./output");
 // Obtiene el objeto de datos
 let datos = data.datos;
 
+/**
+ * Función principal del programa
+ */
 const iniciarPrograma = async () => {
   // Carga los datos iniciales
   datos = await data.cargarBandas();

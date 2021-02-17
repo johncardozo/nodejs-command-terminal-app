@@ -8,6 +8,10 @@ const datos = {
 // Ruta del archivo de datos (../ = sube un nivel)
 const rutaArchivo = path.join(__dirname, "../data/datos.json");
 
+/**
+ * Función que carga en memoria las bandas a partir de un archivo Json.
+ * @returns {Object} objetos que contiene el arreglo de bandas
+ */
 const cargarBandas = async () => {
   // Verifica si el archivo de datos existe
   if (fs.existsSync(rutaArchivo)) {
@@ -25,6 +29,11 @@ const cargarBandas = async () => {
   }
 };
 
+/**
+ * Función que agrega una banda al objetos de datos, guarda el objeto en un archivo Json y retorna el objeto de datos
+ * @param {Object} datos objeto al cual se le agregará la banda
+ * @param {Object} banda banda que será agregada
+ */
 const agregarBanda = async (datos, banda) => {
   // Convierte el año en un entero
   banda.year = parseInt(banda.year);
@@ -41,6 +50,12 @@ const agregarBanda = async (datos, banda) => {
   return datos;
 };
 
+/**
+ * Función que busca una banda en el objeto de datos, reemplaza los valores de la banda, guarda el objeto de datos en un archivo Json y retorna el objeto de datos.
+ * @param {Object} datos objeto al cual se le editará una banda
+ * @param {String} nombreAnteriorBanda nombre de la banda a editar
+ * @param {Object} nuevaBanda Nuevos datos de la banda
+ */
 const editarBanda = async (datos, nombreAnteriorBanda, nuevaBanda) => {
   // Obtiene el indice de la banda seleccionada
   const indice = datos.bandas.findIndex(
@@ -58,6 +73,11 @@ const editarBanda = async (datos, nombreAnteriorBanda, nuevaBanda) => {
   return datos;
 };
 
+/**
+ * Función que dado el nombre de una banda, elimina la banda del objeto de datos, guarda el objeto en un archivo Json y retorna el objeto de datos.
+ * @param {Object} datos objeto de datos al cual se le eliminará una banda
+ * @param {String} banda nombre de la banda a eliminar
+ */
 const eliminarBanda = async (datos, banda) => {
   // Obtiene el indice de la banda seleccionada
   const indice = datos.bandas.findIndex((b) => b.name === banda);
